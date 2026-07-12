@@ -6,21 +6,9 @@ export const metadata: Metadata = {
   title: 'GoalZone Live',
   description: 'Created by Raihan',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: 'https://files.catbox.moe/5irg3u.svg',
+    shortcut: 'https://files.catbox.moe/5irg3u.svg',
+    apple: 'https://files.catbox.moe/5irg3u.svg',
   },
 }
 
