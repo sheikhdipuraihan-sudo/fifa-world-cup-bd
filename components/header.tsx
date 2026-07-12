@@ -7,7 +7,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <Trophy className="w-6 h-6 text-foreground" />
           <h1 className="text-xl font-bold text-foreground">
-            FIFA World Cup
+            GoalZone Live
           </h1>
         </div>
         <div className="flex items-center gap-2 px-3 py-1.5 bg-card rounded-md border border-border">
