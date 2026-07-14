@@ -27,7 +27,7 @@ export default function Page() {
     <main className="min-h-screen bg-background text-foreground">
       <Header />
       <div className="container mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main Stream */}
           <div className="lg:col-span-2">
             <div className="bg-card rounded-lg overflow-hidden border border-border">
@@ -40,15 +40,15 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Sidebar with Chat and Schedule */}
-          <div className="lg:col-span-2 space-y-6">
+          {/* Sidebar */}
+          <div className="lg:col-span-1 space-y-6">
             {/* Live Chat */}
-            <div className="h-96 lg:h-full">
+            <div className="h-80">
               <LiveChat />
             </div>
 
             {/* Match Schedule */}
-            <div className="hidden lg:block">
+            <div>
               <MatchSchedule />
             </div>
           </div>

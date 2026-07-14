@@ -98,23 +98,23 @@ export default function LiveChat() {
   };
 
   return (
-    <div className="bg-card rounded-lg border border-border overflow-hidden flex flex-col h-full">
+    <div className="bg-card rounded-lg border border-border overflow-hidden flex flex-col h-full sticky top-20">
       {/* Header */}
-      <div className="p-4 border-b border-border bg-foreground text-background">
+      <div className="p-3 border-b border-border bg-foreground text-background">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <h3 className="font-semibold">Live Chat</h3>
+          <div className="flex items-center gap-1.5">
+            <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
+            <h3 className="font-semibold text-sm">Live Chat</h3>
           </div>
-          <div className="flex items-center gap-1 text-xs">
-            <Users size={14} />
+          <div className="flex items-center gap-0.5 text-xs">
+            <Users size={12} />
             <span>{messageCount}</span>
           </div>
         </div>
       </div>
 
       {/* Messages Area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-2">
+      <div className="flex-1 overflow-y-auto p-3 space-y-1.5">
         {loading && (
           <div className="text-center text-muted-foreground text-xs">
             Loading messages...
@@ -128,7 +128,7 @@ export default function LiveChat() {
         )}
 
         {messages.map((msg) => (
-          <div key={msg.id} className="space-y-0.5 text-xs">
+          <div key={msg.id} className="space-y-0 text-xs">
             <div className="flex items-baseline gap-1">
               <span className="font-semibold text-blue-500 truncate">
                 {msg.username}
@@ -146,7 +146,7 @@ export default function LiveChat() {
       </div>
 
       {/* Input Area */}
-      <div className="p-3 border-t border-border space-y-2">
+      <div className="p-2 border-t border-border space-y-1.5">
         {showUsernameInput && !isUsernameSet && (
           <form onSubmit={handleSetUsername} className="space-y-2">
             <input
@@ -154,12 +154,12 @@ export default function LiveChat() {
               placeholder="Enter your name..."
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full px-2 py-1.5 bg-background text-foreground border border-border rounded text-xs focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="w-full px-2 py-1 bg-background text-foreground border border-border rounded text-xs focus:outline-none focus:ring-1 focus:ring-blue-500"
               autoFocus
             />
             <button
               type="submit"
-              className="w-full px-2 py-1.5 bg-blue-500 hover:bg-blue-600 text-white rounded text-xs font-medium transition-colors"
+              className="w-full px-2 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded text-xs font-medium transition-colors"
             >
               Join Chat
             </button>
@@ -167,19 +167,19 @@ export default function LiveChat() {
         )}
 
         {isUsernameSet && (
-          <form onSubmit={handleSendMessage} className="flex gap-2">
+          <form onSubmit={handleSendMessage} className="flex gap-1.5">
             <input
               type="text"
               placeholder="Send a message..."
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              className="flex-1 px-2 py-1.5 bg-background text-foreground border border-border rounded text-xs focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="flex-1 px-2 py-1 bg-background text-foreground border border-border rounded text-xs focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
             <button
               type="submit"
-              className="p-1.5 bg-blue-500 hover:bg-blue-600 text-white rounded transition-colors"
+              className="p-1 bg-blue-500 hover:bg-blue-600 text-white rounded transition-colors"
             >
-              <Send size={14} />
+              <Send size={12} />
             </button>
           </form>
         )}
@@ -187,7 +187,7 @@ export default function LiveChat() {
         {!isUsernameSet && !showUsernameInput && (
           <button
             onClick={() => setShowUsernameInput(true)}
-            className="w-full px-2 py-1.5 bg-blue-500 hover:bg-blue-600 text-white rounded text-xs font-medium transition-colors"
+            className="w-full px-2 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded text-xs font-medium transition-colors"
           >
             Join Chat
           </button>
