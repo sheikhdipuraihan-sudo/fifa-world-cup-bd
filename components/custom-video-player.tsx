@@ -277,12 +277,7 @@ export default function CustomVideoPlayer({ streamUrl, channelName }: CustomVide
         onLoadedMetadata={handleLoadedMetadata}
         poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23000' width='1920' height='1080'/%3E%3Ctext x='50%25' y='50%25' font-size='72' fill='%2300d4ff' text-anchor='middle' dominant-baseline='middle' font-family='Arial'%3ELIVE%3C/text%3E%3C/svg%3E"
       />
-      <div className="absolute top-4 left-4 bg-red-500 px-3 py-1 rounded-full z-10">
-        <p className="text-white font-bold text-sm">LIVE</p>
-      </div>
-      <div className="absolute top-4 left-24 bg-black/50 px-4 py-2 rounded z-10">
-        <p className="text-white text-sm font-medium">{channelName}</p>
-      </div>
+
       <div
         className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-300 ${
           showControls ? 'opacity-100' : 'opacity-0 pointer-events-none'
