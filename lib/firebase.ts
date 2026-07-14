@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBNWlNW98v3_PI_CzIy4Ou-cydcR4Lq7_I",
+  apiKey: "AIzaSyBNWlNW98v3_PI_CzIy4Ou-cydcR4Lq7_IAIzaSyBNWlNW98v3_PI_CzIy4Ou-cydcR4Lq7_I",
   authDomain: "goalzone-live.firebaseapp.com",
   databaseURL: "https://goalzone-live-default-rtdb.firebaseio.com",
   projectId: "goalzone-live",
