@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Header from '@/components/header';
-import StreamPlayer from '@/components/stream-player';
+import CustomVideoPlayer from '@/components/custom-video-player';
 import ChannelSelector from '@/components/channel-selector';
 import MatchSchedule from '@/components/match-schedule';
 
@@ -30,7 +30,7 @@ export default function Page() {
           {/* Main Stream */}
           <div className="lg:col-span-2">
             <div className="bg-card rounded-lg overflow-hidden border border-border">
-              <StreamPlayer streamUrl={selectedChannel.streamUrl} channelName={selectedChannel.name} />
+              <CustomVideoPlayer streamUrl={selectedChannel.streamUrl} channelName={selectedChannel.name} />
             </div>
 
             {/* Channel Selector */}
