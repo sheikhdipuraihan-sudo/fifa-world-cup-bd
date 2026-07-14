@@ -5,6 +5,7 @@ import Header from '@/components/header';
 import CustomVideoPlayer from '@/components/custom-video-player';
 import ChannelSelector from '@/components/channel-selector';
 import MatchSchedule from '@/components/match-schedule';
+import LiveChat from '@/components/live-chat';
 
 const channels = [
   {
@@ -25,6 +26,7 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Header />
+      <LiveChat />
       <div className="container mx-auto px-4 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main Stream */}
